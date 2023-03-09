@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Google Translate API Beispiel</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <label for="input-text">Text zum Übersetzen:</label>
+    <br>
+    <textarea id="input-text" rows="4" cols="50"></textarea>
+    <br>
+    <button onclick="translate()">Übersetzen</button>
+    <br>
+    <br>
+    <label for="output-text">Übersetzung:</label>
+    <br>
+    <div id="output-text"></div>
+    
+    <script>
+      async function translate() {
+        const inputText = document.getElementById("input-text").value;
+        const apiKey = "b09322f31dmsh79129b409f6958ap140a3ejsnf5265408cf26";
+        const sourceLang = "de";
+        const targetLang = "en";
+
+        try {
+          const response = await axios.post("https://google-translate1.p.rapidapi.com/language/translate/v2", {
+            q: inputText,
+            source: sourceLang,
+            target: targetLang
+          }, {
+            headers: {
+              "X-RapidAPI-Key": apiKey,
+              "X-RapidAPI-Host": "google-translate1.p.rapidapi.com",
+              "Content-Type": "application/x-www-form-urlencoded"
+            }
+          });
+
+          const translation = response.data.data.translations[0].translatedText;
+          document.getElementById("output-text").innerHTML = translation;
+        } catch (error) {
+          console.log(error);
+        }
+      }
+    </script>
+  </body>
+</html>

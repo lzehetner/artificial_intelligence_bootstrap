@@ -3,7 +3,7 @@
 ## Manager
 Leon Zehetner 50%
 
-Stefan jelic 50%
+Stefan Jelic 50%
 
 ---
 

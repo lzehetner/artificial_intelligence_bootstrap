@@ -29,7 +29,7 @@
                         <li class="nav-item"><a class="nav-link" href="#about">Operation of AI</a></li>
                         <li class="nav-item"><a class="nav-link" href="#services">Machine Learning</a></li>
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="fact_generator/index.html">Fact Generator</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Fact Generator</a></li>
                     </ul>
                 </div>
             </div>
@@ -121,6 +121,7 @@
             </div>
         </section>
         <!-- Portfolio-->
+        <section>
         <div id="portfolio">
             <div class="container-fluid p-0">
                 <div class="row g-0">
@@ -181,7 +182,19 @@
                 </div>
             </div>
         </div>
+        </section>
+        <!-- Fact Generator -->
+        <section class="page-section" id="contact">
+        <h1>Fakten-Generator</h1>
+        <p>Klicken Sie auf "Fakt anzeigen", um einen zufälligen Fakt anzuzeigen.</p>
+        <p>Klicken Sie auf "Kategorie ändern", um die Kategorie der angezeigten Fakten zu ändern.</p>
 
+        <div id="fact"></div>
+
+        <button onclick="generateFact()">Fakt anzeigen</button>
+        <button onclick="changeCategory()">Kategorie ändern</button>
+        <script src="script.js"></script>
+        </section>
         
         <!-- Footer-->
         <footer class="bg-light py-5">

@@ -7,7 +7,7 @@
         <meta name="author" content="" />
         <title>Artifical Intelligence</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+        <link rel="icon" type="image/x-icon" href="img/favicon.png" />
         <!-- Bootstrap Icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Google fonts-->
@@ -186,18 +186,12 @@
         <!-- Fact Generator -->
         <section class="page-section" id="contact">
             <h1 class="text-center mt-0">Faktengenerator</h1>
-        <p class="text-center mt-01">Klicken Sie auf "Fakt anzeigen", um einen zufälligen Fakt anzuzeigen.</p>
-        <p class="text-center mt-01">Klicken Sie auf "Fakt hinzufügen", um die Kategorie der angezeigten Fakten zu ändern.</p>
-
-        <div id="fact"></div>
-
-        <button onclick="generateFact()">Fakt anzeigen</button>
-
-        <p id='addFactText' style='display: none'>Bitte Fakt hier eingeben</p>     
-        <button type='button' onclick ="toggleText()">Fakt hinzufügen</button>
-
+        
+        <button id="generateButton">Show me a new Fact</button>
+  
+        <p id="fact"></p>
+        
         <script src="script.js"></script>
-        </section>
         
         <!-- Footer-->
         <footer class="bg-light py-5">

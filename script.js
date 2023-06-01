@@ -3,29 +3,29 @@ document.addEventListener('DOMContentLoaded', function() {
   const factDisplay = document.getElementById('fact');
   
   generateButton.addEventListener('click', function() {
-    fetchNASAFact()
+    factDisplay.textContent = 'Load new factt...';
+    fetchRandomFact()
       .then(function(fact) {
         factDisplay.textContent = fact;
       })
       .catch(function(error) {
         console.error(error);
-        factDisplay.textContent = 'Fehler beim Laden des Fakts.';
+        factDisplay.textContent = 'Error while loading fact.';
       });
   });
   
-  function fetchNASAFact() {
-    const apiUrl = 'https://api.nasa.gov/planetary/apod?api_key=sFBaYVdNpxvCpXPACNwxMPGP6MoIVCnSSaqP3QIA';
+  function fetchRandomFact() {
+    const apiUrl = 'https://uselessfacts.jsph.pl/random.json?language=en';
     
     return fetch(apiUrl)
       .then(function(response) {
-        if (response.ok) {
-          return response.json();
-        } else {
-          throw new Error('Fehler bei der API-Anfrage: ' + response.status);
+        if (!response.ok) {
+          throw new Error('Error while fetching fact.');
         }
+        return response.json();
       })
       .then(function(data) {
-        return data.explanation;
+        return data.text;
       });
   }
 });

@@ -185,14 +185,17 @@
         </section>
         <!-- Fact Generator -->
         <section class="page-section" id="contact">
-        <h1>Fakten-Generator</h1>
-        <p>Klicken Sie auf "Fakt anzeigen", um einen zufälligen Fakt anzuzeigen.</p>
-        <p>Klicken Sie auf "Kategorie ändern", um die Kategorie der angezeigten Fakten zu ändern.</p>
+            <h1 class="text-center mt-0">Faktengenerator</h1>
+        <p class="text-center mt-01">Klicken Sie auf "Fakt anzeigen", um einen zufälligen Fakt anzuzeigen.</p>
+        <p class="text-center mt-01">Klicken Sie auf "Fakt hinzufügen", um die Kategorie der angezeigten Fakten zu ändern.</p>
 
         <div id="fact"></div>
 
         <button onclick="generateFact()">Fakt anzeigen</button>
-        <button onclick="changeCategory()">Kategorie ändern</button>
+
+        <p id='addFactText' style='display: none'>Bitte Fakt hier eingeben</p>     
+        <button type='button' onclick ="toggleText()">Fakt hinzufügen</button>
+
         <script src="script.js"></script>
         </section>
         

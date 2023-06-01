@@ -25,10 +25,11 @@ const category = document.getElementById("category").value;
 const factList = facts[category];
 const randomFact = factList[Math.floor(Math.random() * factList.length)];
 document.getElementById("fact").innerHTML = randomFact;
+
 }
 
 // Funktion zum Ändern der Kategorie.
-function changeCategory() {
+function addFact() {
 const categoryElement = document.getElementById("category");
 const currentCategory = categoryElement.value;
 let newCategory;
@@ -49,3 +50,12 @@ option.text = category;
 categorySelect.appendChild(option);
 }
 document.body.insertBefore(categorySelect, document.getElementById("fact"));
+
+function toggleText() {
+    var text = document.getElementById("addFactText");
+    if (text.style.display === "none") {
+      text.style.display = "none";
+    } else {
+      text.style.display = "none";
+    }
+  }

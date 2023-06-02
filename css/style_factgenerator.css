@@ -1,0 +1,40 @@
+.fact-generator {
+    background-color: #F1F4FF;
+    padding: 4rem 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #FF8800;
+    margin-bottom: 2rem;
+}
+
+.fact-generator-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    background-color: #FF8800;
+    color: #FFF;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #FF5500;
+}
+
+.fact-text,
+.joke-text {
+    font-size: 1.5rem;
+    color: #007BFF;
+    text-align: center;
+    margin-top: 2rem;
+}

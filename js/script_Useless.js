@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const factDisplay = document.getElementById('fact');
   
   generateButton.addEventListener('click', function() {
-    factDisplay.textContent = 'Load new factt...';
-    fetchRandomFact()
+    factDisplay.textContent = 'Loading new fact...';
+    fetchRandomFact('https://uselessfacts.jsph.pl/random.json?language=en')
       .then(function(fact) {
         factDisplay.textContent = fact;
       })
@@ -14,9 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   });
   
-  function fetchRandomFact() {
-    const apiUrl = 'https://uselessfacts.jsph.pl/random.json?language=en';
-    
+  function fetchRandomFact(apiUrl) {
     return fetch(apiUrl)
       .then(function(response) {
         if (!response.ok) {

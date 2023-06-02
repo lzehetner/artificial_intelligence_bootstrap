@@ -17,6 +17,7 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/style_factgenerator.css" rel="stylesheet" />
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -182,17 +183,21 @@
                 </div>
             </div>
         </div>
-        </section>
-        <!-- Fact Generator -->
-        <section class="page-section" id="contact">
-            <h1 class="text-center mt-0">Faktengenerator</h1>
-        
-        <button id="generateButton">Show me a new Fact</button>
-  
-        <p id="fact"></p>
-        
-        <script src="script.js"></script>
-        
+  <!-- Fact Generator -->
+  <section class="page-section fact-generator" id="contact">
+        <div class="container">
+            <h2 class="section-title">Fact Generator</h2>
+            <div class="fact-generator-content">
+                <button id="generateButton" class="btn">Show me a new Fact</button>
+                <p id="fact" class="fact-text"></p>
+                <br>
+                <button id="chuckButton" class="btn">You wanna see a joke?</button>
+                <p id="joke" class="joke-text"></p>
+            </div>
+        </div>
+        <script src="/js/script_Useless.js"></script>
+        <script src="/js/script_Chuck.js"></script>
+    </section>  
         <!-- Footer-->
         <footer class="bg-light py-5">
             <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2023 - Stefan and Leon</div></div>

@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
   jokeOneButton.addEventListener('click', function() {
     jokeDisplay.textContent = 'Loading new joke...';
     const selectedCategory = categorySelect.value;
-    const apiUrl = https://jokeapi.dev/api/jokes/${selectedCategory}?type=single;
+    const apiUrl = `https://v2.jokeapi.dev/joke/${selectedCategory}`;
 
     fetch(apiUrl)
       .then(function(response) {
@@ -16,7 +16,15 @@ document.addEventListener('DOMContentLoaded', function() {
         return response.json();
       })
       .then(function(data) {
-        jokeDisplay.textContent = data.joke;
+        if (data.error) {
+          jokeDisplay.textContent = 'No joke found.';
+        } else {
+          if (data.type === 'twopart') {
+            jokeDisplay.textContent = `${data.setup} ${data.delivery}`;
+          } else {
+            jokeDisplay.textContent = data.joke;
+          }
+        }
       })
       .catch(function(error) {
         console.error(error);

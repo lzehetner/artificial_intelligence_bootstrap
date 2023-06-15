@@ -30,6 +30,12 @@
 .btn:hover {
     background-color: #FF5500;
 }
+#categorySelect {
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+    text-align: center;
+  }
 
 .fact-text,
 
